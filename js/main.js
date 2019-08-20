@@ -2,13 +2,12 @@ var btn = document.getElementById('btn');
 var animalContainer = document.getElementById("animal-info")
 let jsonPage = 1;
 btn.addEventListener("click", function(){
-    var ourRequest = new XMLHttpRequest();
+    // var ourRequest = new XMLHttpRequest();
     // ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animals-'+jsonPage+'.json');
 
-    /*Below are tests to load local json*/
-    // ourRequest.open('GET','json/test.json');
-    var json = require('json/test.json');
-    console.log(json)
+    /*As chrome forbid load local file, json is GET from github*/
+    let ourRequest = new XMLHttpRequest();
+    ourRequest.open('GET', 'https://raw.githubusercontent.com/robinlxz/news_page_learning/master/json/test.json')
     
     jsonPage<=3 ? jsonPage++ : console.log("It's done.");
     if (jsonPage>3) {
