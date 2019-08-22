@@ -1,5 +1,6 @@
 var btn = document.getElementById('btn');
-var animalContainer = document.getElementById("animal-info")
+var animalContainer = document.getElementById("animal-info");
+var newsListContainer = document.getElementById("news-list-container");
 let jsonPage = 1;
 btn.addEventListener("click", function(){
     // var ourRequest = new XMLHttpRequest();
@@ -53,3 +54,8 @@ var renderHTML = function(data){
     animalContainer.insertAdjacentHTML('beforeend', htmlString)    
 };
 
+let renderHTML2 = function(importedJSON) {
+    let htmlString = '';
+
+    newsListContainer.insertAdjacentElement('beforeend', htmlString)
+}
