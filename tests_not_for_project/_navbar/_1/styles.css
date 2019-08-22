@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+li, a, button {
+    font-family: Beaufort,Roboto,serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #93743d;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+}
