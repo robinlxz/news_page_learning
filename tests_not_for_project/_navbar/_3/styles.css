@@ -24,6 +24,16 @@ header {
 
 .logo {
     cursor: pointer;
+    order: 3;
+    margin-left: auto;
+}
+
+nav {
+    order: 1;
+}
+
+.cta {
+    order: 2;
 }
 
 .nav_links {
@@ -33,6 +43,11 @@ header {
 .nav_links li {
     display: inline-block;
     padding: 0px 20px;
+}
+
+.nav_links li:nth-child(1){
+    display: inline-block;
+    padding: 0 20px 0 0;
 }
 
 .nav_links li a {
@@ -45,6 +60,7 @@ header {
 }
 
 button {
+    margin-left: 20px;
     padding: .5rem;
     background: #0d171c;
     border: 1px solid #93743d;

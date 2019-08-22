@@ -17,13 +17,14 @@ li, a, button {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 30px 10%;
 }
 
 .logo {
     cursor: pointer;
+    margin-right: auto;
 }
 
 .nav_links {
@@ -53,6 +54,7 @@ button {
     font-weight: 500;
     cursor: pointer;
     /* transition: all 0.3s ease 0s; */
+    margin-left: 20px;
 }
 
 button:hover {

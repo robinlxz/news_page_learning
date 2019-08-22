@@ -1,22 +1,47 @@
 <!DOCTYPE html>
-<html>
     <head>
-        <!-- <meta name="viewpoint" content="width=device-width, initial-scale=1" /> -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-
-        <title>News | W of W</title>
+        <title>Navbar</title>
+        <meta name="description" content="learning project for building a lol news webpage">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">
     </head>
-
     <body>
         <header>
-            <h1>WOW news h1</h1>
-            <button id="btn">Import the page</button>
+            <div class="wrapper">
+                <img class="logo" src="images/logo.png" alt="logl">
+                <nav>
+                    <ul class="nav_links">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">GAME INFO</a></li>
+                        <li><a href="#">UNIVERSE</a></li>
+                        <li><a href="#">SUPPORT</a></li>
+                    </ul>
+                    <div class="right-div">
+                        <a class="cta" href="#"><button>Contact</button></a>
+                        <button id="btn">Import the page</button>
+                    </div>
+                </nav>
+            </div>
         </header>
-        
+
         <div id="animal-info"></div>
+
+        <div class="news-page">
+            <div class="PageList">
+                <div class="breadcomb">
+
+                </div>
+                <h1 class="title">All</h1>
+                <hr>
+                <div class="list">
+
+                </div>
+            </div>
+        </div>
+    
 
         <script src="js/main.js"></script>
     </body>
