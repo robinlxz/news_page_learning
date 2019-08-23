@@ -156,6 +156,12 @@ hr {
 
 .horizontal-news-box .newsinfo .date {
   color: #d3c7a9;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
+  margin-top: 140px;
+  margin-bottom: 0px;
+}
+
+p {
+  color: #93743d;
 }
