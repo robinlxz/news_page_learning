@@ -114,6 +114,7 @@ hr {
   overflow: hidden;
   border-style: inset;
   border-width: 1px;
+  margin-bottom: 50px;
 }
 
 .horizontal-news-box {
@@ -143,7 +144,18 @@ hr {
   position: relative; */
 }
 
-.category {
+.horizontal-news-box .newsinfo .category {
   padding: 0;
   margin: 0;
+}
+
+.horizontal-news-box .newsinfo .news-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.horizontal-news-box .newsinfo .date {
+  color: #d3c7a9;
+  position: absolute;
+  bottom: 0;
 }
