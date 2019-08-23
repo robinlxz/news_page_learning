@@ -1,17 +1,43 @@
 var btn = document.getElementById('btn');
-var animalContainer = document.getElementById("animal-info");
+// var animalContainer = document.getElementById("animal-info");
 var newsListContainer = document.getElementById("news-list-container");
-let jsonPage = 1;
+let countPage = 1;
+
+window.onload = function(){
+    let ourRequest = new XMLHttpRequest();
+    ourRequest.open('GET', 'https://raw.githubusercontent.com/robinlxz/news_page_learning/master/json/web.json');
+    
+    if (countPage>1) {
+        btn.classList.add("hide-me");
+    }
+
+    ourRequest.onload = function () {
+        if (ourRequest.status >= 200 && ourRequest.status < 400) {
+            var ourData = JSON.parse(ourRequest.responseText)
+            console.log("first element in response data is:", ourData[0]);
+            renderHTML(ourData);
+        }
+        else {
+            newsListContainer.insertAdjacentHTML('beforeend', "Ops, server returned error code: "+ourRequest.status)
+        }
+    };
+
+    ourRequest.onerror = function () {
+        newsListContainer.insertAdjacentHTML('beforeend', "Ops, connection error")
+    }
+
+    ourRequest.send();
+}
 
 btn.addEventListener("click", function(){
    /*As chrome forbid load local file, json is GET from github*/
     let ourRequest = new XMLHttpRequest();
-    ourRequest.open('GET', 'https://raw.githubusercontent.com/robinlxz/news_page_learning/master/json/web.json')
+    ourRequest.open('GET', 'https://raw.githubusercontent.com/robinlxz/news_page_learning/master/json/web2.json');
+    countPage += 1;
     
-    // if (jsonPage>3) {
-    //     btn.classList.add("hide-me");
-    // }
-    animalContainer.insertAdjacentHTML('beforeend', "<br><br>")  
+    if (countPage>1) {
+        btn.classList.add("hide-me");
+    }
 
     ourRequest.onload = function () {
         if (ourRequest.status >= 200 && ourRequest.status < 400) {
@@ -57,9 +83,3 @@ var renderHTML = function(data){
 /*
 https://raw.githubusercontent.com/robinlxz/news_page_learning/master/json/web.json
 */
-
-let renderHTML2 = function(importedJSON) {
-    let htmlString = '';
-
-    newsListContainer.insertAdjacentElement('beforeend', htmlString)
-}

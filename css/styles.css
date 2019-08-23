@@ -74,7 +74,7 @@ button:hover {
   justify-content: flex-end;
   text-align: right;
   flex-grow: 1;
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 .news-page {
@@ -164,4 +164,10 @@ hr {
 
 p {
   color: #93743d;
+}
+
+.hide-me {
+  visibility: hidden;
+  opacity: 0;
+  transition: scale(.75);
 }
