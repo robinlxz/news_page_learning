@@ -54,6 +54,7 @@ button:hover {
   justify-content: space-between;
   width: 200%;
   background-color: #0d171c; /*not working*/
+  height: 70px;
 }
 
 .logo {
@@ -101,6 +102,11 @@ button:hover {
   padding-top: 120px;
   width: 80%;
   margin: auto;
+  text-align: center;
+}
+
+.PageList h1 {
+  text-align: left;
 }
 
 .PageList .list {
@@ -141,6 +147,7 @@ hr {
   border: 1px solid #93743d;
   font-weight: 500;
   overflow: hidden;
+  flex: 1 1 60%;
 }
 
 .image-link {
@@ -177,6 +184,27 @@ hr {
   margin-bottom: 0px;
 }
 
+@media screen and (max-width: 1010px) {
+  .horizontal-news-box {
+    margin: 0 auto 20px auto;
+    padding: 25px;
+    height: 72.3%;
+    max-height: 506px;
+    max-width: 700px;
+    flex-wrap: wrap;
+  }
+  .horizontal-news-box .newsinfo {
+    margin:initial;
+    padding-top: 10px;
+    max-width: 650px;
+    flex-basis:100%;
+  }
+  .horizontal-news-box .newsinfo .date {
+    position: static;
+    margin-top: 0;
+  }
+}
+
 p {
   color: #93743d;
 }
@@ -185,4 +213,9 @@ p {
   visibility: hidden;
   opacity: 0;
   transition: scale(.75);
+}
+
+.btn {
+  width: 30%;
+  
 }
