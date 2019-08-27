@@ -49,10 +49,10 @@ button:hover {
 .wrapper {
   display:flex;
   margin:auto;
-  max-width: 95rem;
+  /* max-width: 95rem; */
   /* -webkit-box-pack: justify; */ /*what's this for*/
   justify-content: space-between;
-  width: 200%;
+  width: 100%;
   background-color: #0d171c; /*not working*/
   height: 70px;
 }
